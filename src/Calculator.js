@@ -7,7 +7,7 @@ export default class Calculator extends Component {
         this.state = {
             input1: 0,
             input2: 0,
-            results: 0
+            results: ''
         }
     }
 
@@ -38,14 +38,14 @@ sumValues = () => {
 
        <div className="container">
         <h1 style={{fontSize: '62px'}}>Add with React!</h1>
-        <div className="add">
-            <input type="text" onChange={this.changeFirstValue} />
-            <span style={{fontSize: '62px'}}>+</span>
-            <input style={{marginBottom: '23px'}} type="text" onChange={this.changeSecondValue} />
-            <button onClick={this.sumValues}><span class="operator" style={{
-padding: '12px'}}>=</span></button>
-            {/* <h2>Addition results go here!</h2> */}<br></br>
-            <span class="result">{this.state.results}</span>
+        <div>
+            <input style={{border: 'none', outline: 'none'}} type="text" onChange={this.changeFirstValue} />
+            <span style={{fontSize: '62px', fontWeight: 'bold', marginLeft: '12px'}}>+</span>
+            <input style={{marginBottom: '23px', border: 'none', outline: 'none'}} type="text" onChange={this.changeSecondValue} />
+            <button onClick={this.sumValues} style={{backgroundColor: '#b7b7a4', color: 'white', border: 'none'}}><span style={{
+padding: '12px', fontSize: '52px', fontWeight: 'bold'}}>=</span></button>
+            {/* <h2>Addition results go here!</h2> */}
+            <span style={{fontSize: '62px', paddingLeft: '23px'}}>{this.state.results}</span>
             </div>
         </div>
 
