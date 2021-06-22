@@ -37,14 +37,15 @@ sumValues = () => {
        return ( 
 
        <div className="container">
-        <h1>Add with React!</h1>
+        <h1 style={{fontSize: '62px'}}>Add with React!</h1>
         <div className="add">
             <input type="text" onChange={this.changeFirstValue} />
-            <span>+</span>
-            <input type="text" onChange={this.changeSecondValue} />
-            <button onClick={this.sumValues}>=</button>
-            <h3>Addition results go here!</h3>
-            {this.state.results}
+            <span style={{fontSize: '62px'}}>+</span>
+            <input style={{marginBottom: '23px'}} type="text" onChange={this.changeSecondValue} />
+            <button onClick={this.sumValues}><span class="operator" style={{
+padding: '12px'}}>=</span></button>
+            {/* <h2>Addition results go here!</h2> */}<br></br>
+            <span class="result">{this.state.results}</span>
             </div>
         </div>
 
