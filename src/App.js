@@ -5,9 +5,9 @@ import Calculator from './Calculator'
 export default class App extends Component {
 
 constructor(props){
-  super()
-  this.state = {}
-}
+//   super()
+//   this.state = {}
+// }
 
 render () {
   return(
