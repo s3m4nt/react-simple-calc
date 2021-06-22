@@ -44,7 +44,6 @@ sumValues = () => {
             <input style={{marginBottom: '23px', border: 'none', outline: 'none'}} type="text" onChange={this.changeSecondValue} />
             <button onClick={this.sumValues} style={{backgroundColor: '#b7b7a4', color: 'white', border: 'none'}}><span style={{
 padding: '12px', fontSize: '52px', fontWeight: 'bold'}}>=</span></button>
-            {/* <h2>Addition results go here!</h2> */}
             <span style={{fontSize: '62px', paddingLeft: '23px'}}>{this.state.results}</span>
             </div>
         </div>
