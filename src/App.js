@@ -1,23 +1,14 @@
-import React, {Component} from 'react'
-import './App.css'
+// import { Component } from 'react'
 import Calculator from './Calculator'
+import './App.css'
 
-export default class App extends Component {
+const App = () => {
+  return (
 
-constructor(props){
-//   super()
-//   this.state = {}
-// }
+<Calculator style={{position: 'absolute', left: '50%', top: '50%',transform: 'translate(-50%, -50%)'
+}}/>
 
-render () {
-  return(
-    <div style={{
-        position: 'absolute', left: '50%', top: '50%',
-        transform: 'translate(-50%, -50%)'
-    }}>
-    <Calculator/>
-    </div>
   )
 }
 
-}
+export default App
