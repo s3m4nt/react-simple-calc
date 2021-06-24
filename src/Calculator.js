@@ -4,9 +4,11 @@ import {useState} from 'react'
 
 export default function Calculator(){
 
-// useState retturns an array of 2 values
-const [firstValue, setCount] = useState
-const [user, setUser] = useState
+const [count, setCount] = useState({
+    changeFirstValue: 0,
+    changeSecondValue: 0
+
+})
 
 
 function changeFirstValue(e) { 
@@ -35,16 +37,15 @@ function sumValues(){
        <div className="container">
         <h1>Add with React!</h1>
             <div>
-                <input type="text" onChange={changeFirstValue} />+
-                <input type="text" onChange={changeSecondValue} />
+                <input type="text" onChange={count.changeFirstValue} />+
+                <input type="text" onChange={count.changeSecondValue} />
                 <button onClick={sumValues}>=</button>
                 {state.results}
             </div>
         </div>
 
        )
-    }
-
+}
 
 
 
