@@ -5,42 +5,50 @@ import {useState} from 'react'
 export default function Calculator(){
 
 const [count, setCount] = useState({
-    changeFirstValue: 0,
-    changeSecondValue: 0
+    firstValue: 0,
+    secondValue: 0
 
 })
+
+// const [firstNum, setFirstNum] = useState()
+
+
+const [result, setResult] = useState('')
 
 
 function changeFirstValue(e) { 
 const firstValue = e.target.value
-setState({
-    input1: firstValue
+setCount({
+    ...count, firstValue,
 })
 }
 
 function changeSecondValue(e) {
     const secondValue = e.target.value
-    setState({
-        input2: secondValue
-    })
+setCount({
+    ...count, secondValue,
+})
 }
 
 function sumValues(){
-    let sum = parseFloat(state.input1) + parseFloat(state.input2)
-    setState({
-        results: sum
-    })
+    let sum = parseFloat(count.firstValue) + parseFloat(count.secondValue)
+setResult(sum)
 }
 
        return ( 
 
        <div className="container">
-        <h1>Add with React!</h1>
+        <h1 style={{fontSize: '62px'}}>Add with React!</h1>
             <div>
-                <input type="text" onChange={count.changeFirstValue} />+
-                <input type="text" onChange={count.changeSecondValue} />
-                <button onClick={sumValues}>=</button>
-                {state.results}
+                <input style={{border: 'none', outline: 'none'}} type="text" onChange={changeFirstValue} />
+                <span style={{fontSize: '62px', fontWeight: 'bold', marginLeft: '12px'}}>+</span>
+                <input style={{border: 'none', outline: 'none'}} type="text" onChange={changeSecondValue} />
+                {/* <button onClick={sumValues}>=</button> */}
+
+
+                <button onClick={sumValues} style={{backgroundColor: '#b7b7a4', color: 'white', border: 'none', marginLeft: '12px'}}><span style={{padding: '12px', fontSize: '52px', fontWeight: 'bold'}}>Add it!</span></button>
+                <br/>
+                <span style={{fontSize: '62px', paddingLeft: '23px'}}>{result}</span>
             </div>
         </div>
 
